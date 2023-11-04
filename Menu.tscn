@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=7 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
