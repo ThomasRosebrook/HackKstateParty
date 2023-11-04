@@ -13,6 +13,7 @@ public partial class Player : Area2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
+        //Hide();
         ScreenSize = GetViewportRect().Size;
     }
 
@@ -55,8 +56,8 @@ public partial class Player : Area2D
 
         Position += velocity * (float)delta;
         Position = new Vector2(
-            x: Mathf.Clamp(Position.X, 0, ScreenSize.X / 2),
-            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y / 2)
+            x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
+            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
         );
 
         if (velocity.X > 0)
@@ -81,9 +82,16 @@ public partial class Player : Area2D
         }
     }
 
+    public void Start(Vector2 position)
+    {
+        Position = position;
+        Show();
+        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
+    }
+
     private void OnBodyEntered(PhysicsBody2D body)
     {
-        //Hide();
+        Hide();
         EmitSignal(SignalName.Hit);
         // Must be deferred as we can't change physics properties on a physics callback.
         GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred(CollisionShape2D.PropertyName.Disabled, true);

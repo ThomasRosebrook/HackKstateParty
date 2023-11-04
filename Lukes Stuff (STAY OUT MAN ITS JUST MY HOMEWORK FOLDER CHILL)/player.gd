@@ -39,6 +39,10 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "still"
 	pass
 
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
 
 func _on_body_entered(body):
 	pass # Replace with function body.
