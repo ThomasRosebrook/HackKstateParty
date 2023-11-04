@@ -36,7 +36,7 @@ func _process(delta):
 	elif velocity.y > 0:
 		$AnimatedSprite2D.animation = "up"
 	else:
-		$AnimatedSprite2D.aniamton = "still"
+		$AnimatedSprite2D.animation = "still"
 	pass
 
 

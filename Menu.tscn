@@ -1,13 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=5 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
-[ext_resource type="Script" path="res://ButtonDesign.cs" id="2_d386l"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_6uldm"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6y7k7"]
-blend_mode = 1
+[ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
@@ -30,23 +25,12 @@ vertical_alignment = 2
 justification_flags = 161
 script = ExtResource("1_2ydrn")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 516.0
-offset_top = 481.0
-offset_right = 633.0
-offset_bottom = 528.0
-texture_normal = SubResource("CanvasTexture_6uldm")
-script = ExtResource("2_d386l")
-
-[node name="Button" type="Button" parent="TextureButton"]
-material = SubResource("CanvasItemMaterial_6y7k7")
-use_parent_material = true
-layout_mode = 0
-offset_left = 97.0
-offset_top = 78.0
-offset_right = 164.0
-offset_bottom = 109.0
+offset_left = 626.0
+offset_top = 553.0
+offset_right = 693.0
+offset_bottom = 584.0
 text = "Game 1
 "
 script = ExtResource("1_gmykx")
@@ -64,6 +48,7 @@ text = "Game 1
 layer = -1
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
+visible = false
 show_behind_parent = true
 visibility_layer = 512
 offset_left = -5.0
@@ -73,4 +58,12 @@ offset_bottom = 648.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
 
-[connection signal="pressed" from="TextureButton/Button" to="TextureButton/Button" method="button_press"]
+[node name="TextureButton" type="TextureButton" parent="Background"]
+offset_left = 622.0
+offset_top = 553.0
+offset_right = 689.0
+offset_bottom = 584.0
+texture_normal = ExtResource("3_rqnxh")
+script = ExtResource("1_gmykx")
+
+[connection signal="pressed" from="Button" to="Button" method="button_press"]
