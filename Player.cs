@@ -55,8 +55,8 @@ public partial class Player : Area2D
 
         Position += velocity * (float)delta;
         Position = new Vector2(
-            x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
-            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+            x: Mathf.Clamp(Position.X, 0, ScreenSize.X / 2),
+            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y / 2)
         );
 
         if (velocity.X > 0)
