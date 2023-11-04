@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cruu8o1o8hjey"
+path="res://.godot/imported/keenan.mp3-380ff51c3acd157b70594fccc3227dbb.mp3str"
+
+[deps]
+
+source_file="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/keenan.mp3"
+dest_files=["res://.godot/imported/keenan.mp3-380ff51c3acd157b70594fccc3227dbb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
