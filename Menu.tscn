@@ -77,7 +77,6 @@ grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
-visible = false
 show_behind_parent = true
 visibility_layer = 512
 offset_left = -5.0
