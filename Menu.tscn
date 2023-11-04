@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=7 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
@@ -73,7 +73,7 @@ offset_bottom = 718.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_g8ggg")
 volume_db = -50.64
 
