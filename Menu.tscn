@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=7 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
-[ext_resource type="Script" path="res://ButtonDesign.cs" id="2_d386l"]
-[ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3" id="4_tiy15"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_6uldm"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6y7k7"]
-blend_mode = 1
+[ext_resource type="Script" path="res://Game2.cs" id="3_frbly"]
+[ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
+[ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3" id="4_g8ggg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
@@ -31,23 +27,12 @@ vertical_alignment = 2
 justification_flags = 161
 script = ExtResource("1_2ydrn")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 516.0
-offset_top = 481.0
+offset_left = 566.0
+offset_top = 547.0
 offset_right = 633.0
-offset_bottom = 528.0
-texture_normal = SubResource("CanvasTexture_6uldm")
-script = ExtResource("2_d386l")
-
-[node name="Button" type="Button" parent="TextureButton"]
-material = SubResource("CanvasItemMaterial_6y7k7")
-use_parent_material = true
-layout_mode = 0
-offset_left = 97.0
-offset_top = 78.0
-offset_right = 164.0
-offset_bottom = 109.0
+offset_bottom = 578.0
 text = "Game 1
 "
 script = ExtResource("1_gmykx")
@@ -60,22 +45,36 @@ offset_right = 635.0
 offset_bottom = 375.0
 text = "Game 1
 "
+script = ExtResource("3_frbly")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
+[node name="TextureButton" type="TextureButton" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 565.0
+offset_top = 547.0
+offset_right = 592.0
+offset_bottom = 547.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_rqnxh")
+
 [node name="TextureRect" type="TextureRect" parent="Background"]
+visible = false
 show_behind_parent = true
 visibility_layer = 512
 offset_left = -5.0
 offset_top = -1.0
-offset_right = 1154.0
-offset_bottom = 648.0
+offset_right = 1155.0
+offset_bottom = 718.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_tiy15")
-autoplay = true
+stream = ExtResource("4_g8ggg")
+volume_db = -50.64
 
-[connection signal="pressed" from="TextureButton/Button" to="TextureButton/Button" method="button_press"]
+[connection signal="pressed" from="Game 2" to="Game 2" method="button_press"]
