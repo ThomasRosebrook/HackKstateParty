@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3dws387rwh2q"]
+
+[ext_resource type="Texture2D" uid="uid://b0ey4gi5wshlu" path="res://Assets/Art/HackyDown.png" id="1_ebmia"]
+[ext_resource type="Script" path="res://Player.cs" id="1_gepeq"]
+[ext_resource type="Texture2D" uid="uid://4y0ywnygj7es" path="res://Assets/Art/HackyLeft.png" id="2_74wjr"]
+[ext_resource type="Texture2D" uid="uid://p2wlf472xj4k" path="res://Assets/Art/HackyRight.png" id="3_1s4tw"]
+[ext_resource type="Texture2D" uid="uid://7q3afg06qe5f" path="res://Assets/Art/Hacky.png" id="4_thegm"]
+[ext_resource type="Texture2D" uid="uid://y44hdpctbx0r" path="res://Assets/Art/HackyUp.png" id="5_2emdj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uk53e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ebmia")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_74wjr")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1s4tw")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_thegm")
+}],
+"loop": true,
+"name": &"Still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2emdj")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0f3q"]
+size = Vector2(58, 43)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="Area2D" parent="."]
+script = ExtResource("1_gepeq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_uk53e")
+animation = &"Still"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(32, 42.5)
+shape = SubResource("RectangleShape2D_o0f3q")
