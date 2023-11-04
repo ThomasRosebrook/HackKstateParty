@@ -66,3 +66,5 @@ animation = &"Still"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(32, 42.5)
 shape = SubResource("RectangleShape2D_o0f3q")
+
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
