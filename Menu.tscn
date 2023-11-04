@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=8 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
 [ext_resource type="Script" path="res://ButtonDesign.cs" id="2_d386l"]
+[ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3" id="4_tiy15"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6uldm"]
 
@@ -72,5 +73,9 @@ offset_right = 1154.0
 offset_bottom = 648.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_tiy15")
+autoplay = true
 
 [connection signal="pressed" from="TextureButton/Button" to="TextureButton/Button" method="button_press"]
