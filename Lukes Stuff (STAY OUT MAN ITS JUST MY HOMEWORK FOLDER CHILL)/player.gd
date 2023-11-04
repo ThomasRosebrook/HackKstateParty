@@ -36,9 +36,13 @@ func _process(delta):
 	elif velocity.y > 0:
 		$AnimatedSprite2D.animation = "up"
 	else:
-		$AnimatedSprite2D.aniamton = "still"
+		$AnimatedSprite2D.animation = "still"
 	pass
 
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
 
 func _on_body_entered(body):
 	pass # Replace with function body.

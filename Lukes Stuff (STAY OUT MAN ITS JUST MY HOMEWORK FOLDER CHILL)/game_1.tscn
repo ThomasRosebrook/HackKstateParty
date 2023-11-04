@@ -22,17 +22,17 @@ wait_time = 0.5
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
-[node name="startTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[node name="StartPositiong" type="Marker2D" parent="."]
+[node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(578, 360)
 
-[node name="mobpath" type="Path2D" parent="."]
+[node name="MobPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_20n5b")
 
-[node name="mobslawnloacation" type="PathFollow2D" parent="mobpath"]
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2(-4, -5)
 rotation = 0.00344826
 
@@ -43,4 +43,4 @@ autoplay = true
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
-[connection signal="timeout" from="startTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
