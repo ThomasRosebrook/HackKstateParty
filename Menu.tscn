@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=8 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
@@ -29,17 +29,7 @@ vertical_alignment = 2
 justification_flags = 161
 script = ExtResource("1_2ydrn")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 566.0
-offset_top = 547.0
-offset_right = 633.0
-offset_bottom = 578.0
-text = "Game 1
-"
-script = ExtResource("1_gmykx")
-
-[node name="Game 2" type="Button" parent="."]
+[node name="Game 1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 568.0
 offset_top = 344.0
@@ -48,6 +38,16 @@ offset_bottom = 375.0
 text = "Game 1
 "
 script = ExtResource("3_frbly")
+
+[node name="Game 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 547.0
+offset_right = 633.0
+offset_bottom = 578.0
+text = "Game 2
+"
+script = ExtResource("1_gmykx")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -58,8 +58,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 565.0
 offset_top = 547.0
-offset_right = 592.0
-offset_bottom = 547.0
+offset_right = -520.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_rqnxh")
+
+[node name="TextureButton2" type="TextureButton" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 569.0
+offset_top = 342.0
+offset_right = -516.0
+offset_bottom = -269.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
@@ -79,4 +91,5 @@ expand_mode = 2
 stream = ExtResource("4_g8ggg")
 volume_db = -2.748
 
-[connection signal="pressed" from="Game 2" to="Game 2" method="button_press"]
+[connection signal="pressed" from="Game 1" to="Game 1" method="button_press"]
+[connection signal="pressed" from="Game 2" to="Game 2" method="button_press2"]
