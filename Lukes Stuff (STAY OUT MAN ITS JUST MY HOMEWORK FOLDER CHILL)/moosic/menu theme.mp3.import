@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w6qrg5kab4xl"
+path="res://.godot/imported/menu theme.mp3-06106abfbfc2ab7d1d837d695e636e97.mp3str"
+
+[deps]
+
+source_file="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3"
+dest_files=["res://.godot/imported/menu theme.mp3-06106abfbfc2ab7d1d837d695e636e97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=8 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
+[ext_resource type="Script" path="res://ButtonDesign.cs" id="2_d386l"]
+[ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3" id="4_tiy15"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6uldm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6y7k7"]
+blend_mode = 1
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
@@ -18,18 +25,29 @@ offset_left = 534.0
 offset_top = 22.0
 offset_right = 636.0
 offset_bottom = 48.0
-text = "Simple Game"
+text = "Main Menu"
 horizontal_alignment = 2
 vertical_alignment = 2
 justification_flags = 161
 script = ExtResource("1_2ydrn")
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 566.0
-offset_top = 496.0
+offset_left = 516.0
+offset_top = 481.0
 offset_right = 633.0
-offset_bottom = 527.0
+offset_bottom = 528.0
+texture_normal = SubResource("CanvasTexture_6uldm")
+script = ExtResource("2_d386l")
+
+[node name="Button" type="Button" parent="TextureButton"]
+material = SubResource("CanvasItemMaterial_6y7k7")
+use_parent_material = true
+layout_mode = 0
+offset_left = 97.0
+offset_top = 78.0
+offset_right = 164.0
+offset_bottom = 109.0
 text = "Game 1
 "
 script = ExtResource("1_gmykx")
@@ -56,4 +74,8 @@ offset_bottom = 648.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
 
-[connection signal="pressed" from="Button" to="Button" method="button_press"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_tiy15")
+autoplay = true
+
+[connection signal="pressed" from="TextureButton/Button" to="TextureButton/Button" method="button_press"]

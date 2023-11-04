@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q0qtatvj5uxh"
-path="res://.godot/imported/wah2.jpg-69bd3e6fbd5b17ef317864ce6f76a8b4.ctex"
+uid="uid://cuawwtcorbh36"
+path="res://.godot/imported/buttonDesign.png-d6927218c3225eaac9ba6d4cdd7f36b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/wah2.jpg"
-dest_files=["res://.godot/imported/wah2.jpg-69bd3e6fbd5b17ef317864ce6f76a8b4.ctex"]
+source_file="res://Assets/Art/buttonDesign.png"
+dest_files=["res://.godot/imported/buttonDesign.png-d6927218c3225eaac9ba6d4cdd7f36b8.ctex"]
 
 [params]
 

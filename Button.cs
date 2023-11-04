@@ -9,9 +9,10 @@ public partial class Button : Godot.Button
 	
 	public override void _Ready()
 	{
+		
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	// Called every frame. 'delta' is the elapsed time since the previous frame. 
 	public override void _Process(double delta)
 	{
 	}
@@ -20,6 +21,6 @@ public partial class Button : Godot.Button
 	{
 		Text = "YOu pressed it";
 		GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
-		GetTree().ChangeSceneToFile("Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)\\player.tscn");
+		GetTree().ChangeSceneToFile("Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)\\game_1.tscn");
 	}
 }
