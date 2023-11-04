@@ -1,8 +1,11 @@
 using Godot;
 using System;
+using System.Runtime.ConstrainedExecution;
 
 public partial class Player : Area2D
 {
+    const int XOFFSET = 3;
+
     [Signal]
     public delegate void HitEventHandler();
 
@@ -64,29 +67,29 @@ public partial class Player : Area2D
 
         Position += velocity * (float)delta;
         Position = new Vector2(
-            x: Mathf.Clamp(Position.X, 0, maxX),
+            x: Mathf.Clamp(Position.X, 0 - XOFFSET, maxX - XOFFSET),
             y: Mathf.Clamp(Position.Y, 0, maxY)
         );
 
         if (velocity.X > 0)
         {
-            animatedSprite2D.Animation = "right";
+            animatedSprite2D.Animation = "Right";
         }
         else if (velocity.X < 0)
         {
-            animatedSprite2D.Animation = "left";
-        }
-        else if (velocity.Y > 0)
-        {
-            animatedSprite2D.Animation = "up";
+            animatedSprite2D.Animation = "Left";
         }
         else if (velocity.Y < 0)
         {
-            animatedSprite2D.Animation = "down";
+            animatedSprite2D.Animation = "Up";
+        }
+        else if (velocity.Y > 0)
+        {
+            animatedSprite2D.Animation = "Down";
         }
         else
         {
-            animatedSprite2D.Animation = "still";
+            animatedSprite2D.Animation = "Still";
         }
     }
 
