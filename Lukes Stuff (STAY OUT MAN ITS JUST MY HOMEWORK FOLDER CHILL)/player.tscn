@@ -51,10 +51,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rige"]
-size = Vector2(31, 21)
+size = Vector2(59.3484, 40.9837)
 
 [node name="Player" type="Area2D"]
-position = Vector2(-37, -16)
+position = Vector2(-32, -16)
 scale = Vector2(0.97728, 0.975998)
 script = ExtResource("1_wjas2")
 metadata/_edit_group_ = true
@@ -64,5 +64,7 @@ sprite_frames = SubResource("SpriteFrames_cc8om")
 animation = &"still"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 5.5)
+position = Vector2(3.8147e-06, 11.2705)
 shape = SubResource("RectangleShape2D_2rige")
+
+[connection signal="hit" from="." to="." method="_on_hit"]

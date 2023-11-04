@@ -9,7 +9,7 @@ public partial class Menu : Control
 		GD.Print("TEST");
 		AudioStreamPlayer menuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
 		menuMusic.Play();
-    }
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
