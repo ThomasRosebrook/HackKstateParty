@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=6 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
 [ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
+[ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/menu theme.mp3" id="4_g8ggg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
@@ -27,21 +28,13 @@ script = ExtResource("1_2ydrn")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 626.0
-offset_top = 553.0
-offset_right = 693.0
-offset_bottom = 584.0
+offset_left = 566.0
+offset_top = 547.0
+offset_right = 633.0
+offset_bottom = 578.0
 text = "Game 1
 "
 script = ExtResource("1_gmykx")
-
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 27.0
-texture_normal = ExtResource("3_rqnxh")
 
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
@@ -55,6 +48,18 @@ text = "Game 1
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
+[node name="TextureButton" type="TextureButton" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 565.0
+offset_top = 547.0
+offset_right = 592.0
+offset_bottom = 547.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_rqnxh")
+
 [node name="TextureRect" type="TextureRect" parent="Background"]
 visible = false
 show_behind_parent = true
@@ -65,3 +70,7 @@ offset_right = 1155.0
 offset_bottom = 718.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_g8ggg")
+volume_db = -50.64
