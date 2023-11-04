@@ -12,4 +12,6 @@ public partial class Menu : Control
 	public override void _Process(double delta)
 	{
 	}
+
+	private void 
 }
