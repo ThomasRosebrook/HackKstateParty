@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=4 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
@@ -6,7 +6,7 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
 
-[node name="Control" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -51,9 +51,9 @@ show_behind_parent = true
 visibility_layer = 512
 offset_left = -5.0
 offset_top = -1.0
-offset_right = 1143.0
-offset_bottom = 662.0
+offset_right = 1154.0
+offset_bottom = 648.0
 texture = SubResource("CompressedTexture2D_san3t")
-expand_mode = 1
+expand_mode = 2
 
 [connection signal="pressed" from="Button" to="Button" method="button_press"]
