@@ -84,15 +84,19 @@ offset_right = 1152.0
 offset_bottom = 649.0
 texture = ExtResource("7_1i0dt")
 
-[node name="TheFloor" type="Area2D" parent="."]
-position = Vector2(576, 950)
+[node name="TheFloor" type="RigidBody2D" parent="."]
+collision_mask = 0
+gravity_scale = 0.0
 script = ExtResource("8_j51sk")
 
 [node name="Sprite2D" type="Sprite2D" parent="TheFloor"]
+position = Vector2(576, 950)
 texture = ExtResource("9_y0ll8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheFloor"]
-position = Vector2(0, -308.5)
+position = Vector2(576, 641.5)
 shape = SubResource("RectangleShape2D_i1201")
+
+[node name="ScoreTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
