@@ -1,17 +1,17 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcidujtxt47mp"]
 
-[ext_resource type="Script" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/player.gd" id="1_wjas2"]
-[ext_resource type="Texture2D" uid="uid://cmir87oq8cgoy" path="res://Assets/Art/ProfessorDown.png" id="2_tqkh5"]
-[ext_resource type="Texture2D" uid="uid://dj11qpj688g3b" path="res://Assets/Art/ProfessorLeft.png" id="3_rmn2c"]
-[ext_resource type="Texture2D" uid="uid://bmfqptb1gd0ks" path="res://Assets/Art/ProfessorRight.png" id="4_aumxp"]
-[ext_resource type="Texture2D" uid="uid://cn48srrj5v0ja" path="res://Assets/Art/ProfessorUp.png" id="5_6jodw"]
-[ext_resource type="Texture2D" uid="uid://bgiidonsp5i4k" path="res://Assets/Art/Professor.png" id="5_50ddn"]
+[ext_resource type="Script" path="res://HackyGame2/player.gd" id="1_004t8"]
+[ext_resource type="Texture2D" uid="uid://cmir87oq8cgoy" path="res://Assets/Art/ProfessorDown.png" id="2_kqg8t"]
+[ext_resource type="Texture2D" uid="uid://dj11qpj688g3b" path="res://Assets/Art/ProfessorLeft.png" id="3_bcr5m"]
+[ext_resource type="Texture2D" uid="uid://bmfqptb1gd0ks" path="res://Assets/Art/ProfessorRight.png" id="4_jpo5r"]
+[ext_resource type="Texture2D" uid="uid://bgiidonsp5i4k" path="res://Assets/Art/Professor.png" id="5_lq2dq"]
+[ext_resource type="Texture2D" uid="uid://cn48srrj5v0ja" path="res://Assets/Art/ProfessorUp.png" id="6_q7wai"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc8om"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tqkh5")
+"texture": ExtResource("2_kqg8t")
 }],
 "loop": true,
 "name": &"down",
@@ -19,7 +19,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_rmn2c")
+"texture": ExtResource("3_bcr5m")
 }],
 "loop": true,
 "name": &"left",
@@ -27,7 +27,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_aumxp")
+"texture": ExtResource("4_jpo5r")
 }],
 "loop": true,
 "name": &"right",
@@ -35,7 +35,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_50ddn")
+"texture": ExtResource("5_lq2dq")
 }],
 "loop": true,
 "name": &"still",
@@ -43,7 +43,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_6jodw")
+"texture": ExtResource("6_q7wai")
 }],
 "loop": true,
 "name": &"up",
@@ -56,7 +56,7 @@ size = Vector2(59.3484, 40.9837)
 [node name="Player" type="Area2D"]
 position = Vector2(-32, -16)
 scale = Vector2(0.97728, 0.975998)
-script = ExtResource("1_wjas2")
+script = ExtResource("1_004t8")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
