@@ -67,4 +67,9 @@ animation = &"still"
 position = Vector2(3.8147e-06, 11.2705)
 shape = SubResource("RectangleShape2D_2rige")
 
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game Over"
+
 [connection signal="hit" from="." to="." method="_on_hit"]
