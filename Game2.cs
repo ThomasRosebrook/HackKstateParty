@@ -17,6 +17,7 @@ public partial class Game2 : Button
     {
         Text = "YOu pressed it";
         GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
+        GD.Print("this is cool");
         GetTree().ChangeSceneToFile("res://HackyGame.tscn");
     }
 }
