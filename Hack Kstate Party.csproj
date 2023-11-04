@@ -4,4 +4,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>HackKstateParty</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
 </Project>

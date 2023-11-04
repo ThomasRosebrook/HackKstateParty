@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcidujtxt47mp"]
+[gd_scene load_steps=9 format=3 uid="uid://bcidujtxt47mp"]
 
 [ext_resource type="Script" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/player.gd" id="1_wjas2"]
 [ext_resource type="Texture2D" uid="uid://cmir87oq8cgoy" path="res://Assets/Art/ProfessorDown.png" id="2_tqkh5"]
 [ext_resource type="Texture2D" uid="uid://dj11qpj688g3b" path="res://Assets/Art/ProfessorLeft.png" id="3_rmn2c"]
 [ext_resource type="Texture2D" uid="uid://bmfqptb1gd0ks" path="res://Assets/Art/ProfessorRight.png" id="4_aumxp"]
 [ext_resource type="Texture2D" uid="uid://cn48srrj5v0ja" path="res://Assets/Art/ProfessorUp.png" id="5_6jodw"]
+[ext_resource type="Texture2D" uid="uid://bgiidonsp5i4k" path="res://Assets/Art/Professor.png" id="5_50ddn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc8om"]
 animations = [{
@@ -32,7 +33,10 @@ animations = [{
 "name": &"right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_50ddn")
+}],
 "loop": true,
 "name": &"still",
 "speed": 5.0
@@ -57,7 +61,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cc8om")
-animation = &"left"
+animation = &"still"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 5.5)
