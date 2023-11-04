@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=5 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
-[ext_resource type="Script" path="res://ButtonDesign.cs" id="2_d386l"]
+[ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
 load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
@@ -35,6 +35,14 @@ text = "Game 1
 "
 script = ExtResource("1_gmykx")
 
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 27.0
+texture_normal = ExtResource("3_rqnxh")
+
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 568.0
@@ -53,9 +61,7 @@ show_behind_parent = true
 visibility_layer = 512
 offset_left = -5.0
 offset_top = -1.0
-offset_right = 1154.0
-offset_bottom = 648.0
+offset_right = 1155.0
+offset_bottom = 718.0
 texture = SubResource("CompressedTexture2D_san3t")
 expand_mode = 2
-
-[connection signal="pressed" from="TextureButton/Button" to="TextureButton/Button" method="button_press"]
