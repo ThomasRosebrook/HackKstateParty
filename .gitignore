@@ -12,7 +12,6 @@ export_presets.cfg
 *.user
 *.userosscache
 *.sln.docstates
-*.dtbcache
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
