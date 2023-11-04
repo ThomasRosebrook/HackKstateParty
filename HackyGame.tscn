@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3dws387rwh2q"]
+[gd_scene load_steps=10 format=3 uid="uid://c3dws387rwh2q"]
 
 [ext_resource type="Texture2D" uid="uid://b0ey4gi5wshlu" path="res://Assets/Art/HackyDown.png" id="1_ebmia"]
 [ext_resource type="Script" path="res://Player.cs" id="1_gepeq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://p2wlf472xj4k" path="res://Assets/Art/HackyRight.png" id="3_1s4tw"]
 [ext_resource type="Texture2D" uid="uid://7q3afg06qe5f" path="res://Assets/Art/Hacky.png" id="4_thegm"]
 [ext_resource type="Texture2D" uid="uid://y44hdpctbx0r" path="res://Assets/Art/HackyUp.png" id="5_2emdj"]
+[ext_resource type="Texture2D" uid="uid://b26ic2duc2ibq" path="res://Assets/Art/Backgrounds/Back.png" id="7_1i0dt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uk53e"]
 animations = [{
@@ -66,3 +67,13 @@ animation = &"Still"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(32, 42.5)
 shape = SubResource("RectangleShape2D_o0f3q")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("7_1i0dt")
+
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
