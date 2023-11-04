@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://bk73i3p4xo87f"]
+
+[ext_resource type="Script" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/player.gd" id="1_wjas2"]
+[ext_resource type="Texture2D" uid="uid://cmir87oq8cgoy" path="res://Assets/Art/ProfessorDown.png" id="2_tqkh5"]
+[ext_resource type="Texture2D" uid="uid://dj11qpj688g3b" path="res://Assets/Art/ProfessorLeft.png" id="3_rmn2c"]
+[ext_resource type="Texture2D" uid="uid://bmfqptb1gd0ks" path="res://Assets/Art/ProfessorRight.png" id="4_aumxp"]
+[ext_resource type="Texture2D" uid="uid://cn48srrj5v0ja" path="res://Assets/Art/ProfessorUp.png" id="5_6jodw"]
+[ext_resource type="Texture2D" uid="uid://bgiidonsp5i4k" path="res://Assets/Art/Professor.png" id="5_50ddn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cc8om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tqkh5")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rmn2c")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_aumxp")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_50ddn")
+}],
+"loop": true,
+"name": &"still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6jodw")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rige"]
+size = Vector2(59.3484, 40.9837)
+
+[node name="Player" type="Area2D"]
+position = Vector2(-32, -16)
+scale = Vector2(0.97728, 0.975998)
+script = ExtResource("1_wjas2")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cc8om")
+animation = &"still"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.8147e-06, 11.2705)
+shape = SubResource("RectangleShape2D_2rige")
+
+[connection signal="hit" from="." to="." method="_on_hit"]
