@@ -11,6 +11,7 @@ public partial class Game2 : Button
 	public override void _Process(double delta)
 	{
     }
+    
 
     public void button_press()
     {
