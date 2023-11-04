@@ -57,6 +57,7 @@ size = Vector2(58, 43)
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="Area2D" parent="."]
+position = Vector2(-4, -15)
 script = ExtResource("1_gepeq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
