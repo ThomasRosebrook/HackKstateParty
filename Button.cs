@@ -9,6 +9,7 @@ public partial class Button : Godot.Button
 	
 	public override void _Ready()
 	{
+		this.
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
