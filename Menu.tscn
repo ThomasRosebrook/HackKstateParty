@@ -14,37 +14,46 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 534.0
+offset_top = 22.0
+offset_right = 636.0
+offset_bottom = 48.0
 text = "Simple Game"
 horizontal_alignment = 2
 vertical_alignment = 2
+justification_flags = 161
 script = ExtResource("1_2ydrn")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 566.0
+offset_top = 496.0
+offset_right = 633.0
+offset_bottom = 527.0
 text = "Game 1
 "
 script = ExtResource("1_gmykx")
 
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 568.0
+offset_top = 344.0
+offset_right = 635.0
+offset_bottom = 375.0
 text = "Game 1
 "
 
-[node name="Node2D" type="Node2D" parent="."]
-visible = false
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="Node2D"]
-visible = false
-offset_left = -1397.0
-offset_top = -649.0
-offset_right = 1597.0
-offset_bottom = 1080.0
+[node name="TextureRect" type="TextureRect" parent="Background"]
+show_behind_parent = true
+visibility_layer = 512
+offset_left = -5.0
+offset_top = -1.0
+offset_right = 1143.0
+offset_bottom = 662.0
 texture = SubResource("CompressedTexture2D_san3t")
+expand_mode = 1
 
 [connection signal="pressed" from="Button" to="Button" method="button_press"]
