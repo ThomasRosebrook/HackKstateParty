@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8s723r1blid4"]
+[gd_scene load_steps=6 format=3 uid="uid://8s723r1blid4"]
 
 [ext_resource type="Script" path="res://game1.gd" id="1_milnu"]
 [ext_resource type="PackedScene" uid="uid://dotkhcwddn7jj" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/mob.tscn" id="2_okqdh"]
 [ext_resource type="PackedScene" uid="uid://bcidujtxt47mp" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/player.tscn" id="3_t0mg0"]
+[ext_resource type="AudioStream" uid="uid://ba1a4gmr3rl8b" path="res://Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)/moosic/more intense.mp3" id="4_12ab6"]
 
 [sub_resource type="Curve2D" id="Curve2D_20n5b"]
 _data = {
@@ -34,6 +35,10 @@ curve = SubResource("Curve2D_20n5b")
 [node name="mobslawnloacation" type="PathFollow2D" parent="mobpath"]
 position = Vector2(-4, -5)
 rotation = 0.00344826
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_12ab6")
+autoplay = true
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
