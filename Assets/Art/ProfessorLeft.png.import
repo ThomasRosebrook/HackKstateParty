@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xvlu5omqhffs"
-path="res://.godot/imported/ProfWMAngry.png-44a6c781cfa917a8035742f3d56de8ee.ctex"
+uid="uid://dj11qpj688g3b"
+path="res://.godot/imported/ProfessorLeft.png-30881f6ef8c236fc36d35a6287e5b062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/ProfWMAngry.png"
-dest_files=["res://.godot/imported/ProfWMAngry.png-44a6c781cfa917a8035742f3d56de8ee.ctex"]
+source_file="res://Assets/Art/ProfessorLeft.png"
+dest_files=["res://.godot/imported/ProfessorLeft.png-30881f6ef8c236fc36d35a6287e5b062.ctex"]
 
 [params]
 
