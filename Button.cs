@@ -17,7 +17,7 @@ public partial class Button : Godot.Button
 	{
 	}
 
-	public void button_press()
+	public void button_press2()
 	{
 		Text = "YOu pressed it";
 		GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
