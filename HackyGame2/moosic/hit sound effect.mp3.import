@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4kthhgc2xl7x"
+path="res://.godot/imported/hit sound effect.mp3-2b9eda62f950b9c732fd40bd61411ddd.mp3str"
+
+[deps]
+
+source_file="res://HackyGame2/moosic/hit sound effect.mp3"
+dest_files=["res://.godot/imported/hit sound effect.mp3-2b9eda62f950b9c732fd40bd61411ddd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

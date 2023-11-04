@@ -43,6 +43,7 @@ public partial class Player : Area2D
         }
 
         var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        var collisionShape2D = GetNode<CollisionShape2D>("CollisionShape2D");
 
         if (velocity.Length() > 0)
         {
@@ -53,11 +54,18 @@ public partial class Player : Area2D
         {
             animatedSprite2D.Stop();
         }
+        var maxX = ScreenSize.X;
+        var maxY = ScreenSize.Y;
+        if (collisionShape2D.Shape is RectangleShape2D shape)
+        {
+            maxX = ScreenSize.X - shape.GetRect().Size.X;
+            maxY = ScreenSize.Y - (float)1.5 * shape.GetRect().Size.Y;
+        }
 
         Position += velocity * (float)delta;
         Position = new Vector2(
-            x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
-            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+            x: Mathf.Clamp(Position.X, 0, maxX),
+            y: Mathf.Clamp(Position.Y, 0, maxY)
         );
 
         if (velocity.X > 0)

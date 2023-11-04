@@ -19,8 +19,9 @@ public partial class Button : Godot.Button
 
 	public void button_press2()
 	{
-		Text = "YOu pressed it";
-		GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
-		GetTree().ChangeSceneToFile("Lukes Stuff (STAY OUT MAN ITS JUST MY HOMEWORK FOLDER CHILL)\\game_1.tscn");
+		//Text = "YOu pressed it";
+        GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
+		GD.Print("Why it not work");
+		GetTree().ChangeSceneToFile("res://HackyGame2/game_1.tscn");
 	}
 }
