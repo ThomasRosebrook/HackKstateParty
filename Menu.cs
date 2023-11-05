@@ -22,3 +22,9 @@ public partial class Menu : Control
 	}
 }
 
+
+
+private void _on_game_3_pressed()
+{
+	// Replace with function body.
+}
