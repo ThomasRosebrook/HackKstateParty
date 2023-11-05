@@ -12,21 +12,28 @@ func _process(delta):
 	pass
 
 
-	
+func waitForButtonPress():
+	while true:
+		if Input.is_action_pressed("UI/Start"):
+			break
+		elif Input.is_action_pressed("UI/Menu5"):
+			break
 func game_over():
 	$UI.show_game_over()
 	$UI/ScoreTimer.stop()
 	$MobTimer.stop()
+	$UI/Start.show()
+	$UI/Menu5.show()
+	waitForButtonPress()
 	pass # Replace with function body.
 func new_game():
 	get_tree().call_group("mobs", "queue_free")
 	$UI.update_score(score)
 	$UI.show_message("Get Ready")
-	$UI/Start.show()
-	$UI/Menu5.show()
+
 	score = 0
 	$Player.start($StartPosition.position)
-	$MessageTimer.start()
+	$StartTimer.start()
 
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
