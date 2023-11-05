@@ -8,7 +8,7 @@ public partial class Label : Godot.Label
 	{
 	}
 	//   
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	// Called every frame. 'delta' is the elapsed time since the previous frame. 
 	public override void _Process(double delta)
 	{
 	}

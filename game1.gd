@@ -1,10 +1,9 @@
 extends Node
 @export var mob_scene: PackedScene
 var score
-
+signal start_game
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	new_game()
 	pass # Replace with function body.
 
 
@@ -13,11 +12,16 @@ func _process(delta):
 	pass
 
 
+	
 func game_over():
+	$UI.show_game_over()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	pass # Replace with function body.
 func new_game():
+	get_tree().call_group("mobs", "queue_free")
+	$UI.update_score(score)
+	$UI.show_message("Get Ready")
 	score = 0
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
@@ -51,10 +55,27 @@ func _on_mob_timer_timeout():
 
 func _on_score_timer_timeout():
 	score += 1
+	$UI.update_score(score)
 	pass # Replace with function body.
 
 
 func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
+	pass # Replace with function body.
+
+
+func _on_start_pressed():
+	$Start.hide()
+	start_game.emit()
+	pass # Replace with function body.
+
+
+func _on_menu_pressed():
+	$menu.hide()
+	pass # Replace with function body.
+
+
+func _on_message_timer_timeout():
+	$Message.hide()
 	pass # Replace with function body.
