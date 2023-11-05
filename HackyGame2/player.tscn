@@ -54,22 +54,18 @@ animations = [{
 size = Vector2(59.3484, 40.9837)
 
 [node name="Player" type="Area2D"]
-position = Vector2(-32, -16)
+position = Vector2(4, -10)
 scale = Vector2(0.97728, 0.975998)
 script = ExtResource("1_004t8")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cc8om")
-animation = &"still"
+animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3.8147e-06, 11.2705)
 shape = SubResource("RectangleShape2D_2rige")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Game Over"
-
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="." method="_on_hit"]

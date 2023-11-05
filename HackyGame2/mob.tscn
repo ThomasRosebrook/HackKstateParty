@@ -57,7 +57,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_84ulo"]
-size = Vector2(32, 36)
+size = Vector2(64, 72)
 
 [node name="mob" type="RigidBody2D"]
 collision_mask = 0
@@ -66,11 +66,12 @@ script = ExtResource("1_80nsu")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_dbnls")
 animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 14)
+position = Vector2(0, 28)
 shape = SubResource("RectangleShape2D_84ulo")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

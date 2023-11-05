@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
-[ext_resource type="Script" path="res://Button.cs" id="1_gmykx"]
 [ext_resource type="Script" path="res://Menu.cs" id="1_llw0l"]
-[ext_resource type="Script" path="res://Game2.cs" id="3_frbly"]
+[ext_resource type="Script" path="res://GameButton1.cs" id="3_borgb"]
 [ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
+[ext_resource type="Script" path="res://GameButton2.cs" id="4_0dpbu"]
 [ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://HackyGame2/moosic/menu theme.mp3" id="6_7gr47"]
 [ext_resource type="Script" path="res://RichTextLabelStyle.cs" id="7_kah8l"]
 
@@ -41,7 +41,7 @@ offset_bottom = 396.0
 text = "Game 1
 "
 icon_alignment = 1
-script = ExtResource("3_frbly")
+script = ExtResource("3_borgb")
 
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
@@ -51,7 +51,7 @@ offset_right = 644.0
 offset_bottom = 570.0
 text = "Game 2
 "
-script = ExtResource("1_gmykx")
+script = ExtResource("4_0dpbu")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -100,8 +100,8 @@ volume_db = -2.748
 layout_mode = 0
 offset_left = 479.0
 offset_top = 36.0
-offset_right = 976.0
-offset_bottom = 168.0
+offset_right = 648.0
+offset_bottom = 76.0
 theme_override_font_sizes/normal_font_size = 29
 bbcode_enabled = true
 text = "Main Menu"
