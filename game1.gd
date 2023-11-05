@@ -20,7 +20,7 @@ func waitForButtonPress():
 			break
 func game_over():
 	$UI.show_game_over()
-	$UI/ScoreTimer.stop()
+	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$UI/Start.show()
 	$UI/Menu5.show()
