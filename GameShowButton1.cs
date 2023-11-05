@@ -12,4 +12,10 @@ public partial class GameShowButton1 : Button
 	public override void _Process(double delta)
 	{
 	}
+
+	public void Idk()
+	{
+		Node parent = GetParent();
+		//EmitSignal()
+	}
 }
