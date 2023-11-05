@@ -16,6 +16,6 @@ public partial class GameShowButton1 : Button
 
 	public void button_idk()
 	{
-        GetTree().ChangeSceneToFile("res://gameshowwaddledoo/CorrectAnswer.tscn");
+        GetTree().ChangeSceneToFile("res://gameshowwaddledoo/IncorrectAnswer.tscn");
     }
 }

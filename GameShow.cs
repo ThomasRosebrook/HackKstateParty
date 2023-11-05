@@ -25,6 +25,7 @@ public partial class GameShow : Control
 
 	public void Correct(Button button)
 	{
+		
 		if (answers[0] == button.Text)
 		{
 			GD.Print("yeh");
