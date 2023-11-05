@@ -23,11 +23,17 @@ public partial class GameShow : Control
 		
 	}
 
-	public void Correct()
+	public void Correct(Button button)
 	{
-		//if (answers[0] == button.Text)
-		//{
-			GD.Print("Ye");
-		//}
+		if (answers[0] == button.Text)
+		{
+			GD.Print("yeh");
+			GetTree().ChangeSceneToFile("res://gameshowwaddledoo/CorrectAnswer.tscn");
+		}
+		else
+		{
+			GD.Print("Huh");
+			GetTree().ChangeSceneToFile("res://gameshowwaddledoo/IncorrectAnswer.tscn");
+		}
 	}
 }

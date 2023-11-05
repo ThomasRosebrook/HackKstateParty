@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqjt3tbyq6xqw"]
+
+[ext_resource type="Script" path="res://gameshowwaddledoo/CorrectAnswer.gd" id="1_6htnd"]
+[ext_resource type="Texture2D" uid="uid://cyweksq8875yy" path="res://gameshowwaddledoo/Excited1.png" id="1_lx2ud"]
+[ext_resource type="Texture2D" uid="uid://bwv1b1u5f3eww" path="res://gameshowwaddledoo/Excited2..png" id="2_l75ra"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imo3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lx2ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l75ra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6htnd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(814, 227)
+scale = Vector2(3.84375, 3.84375)
+sprite_frames = SubResource("SpriteFrames_imo3c")
+frame_progress = 0.806775
+
+[node name="Label" type="Label" parent="."]
+offset_left = 277.0
+offset_top = 238.0
+offset_right = 564.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 64
+text = "Correct!"

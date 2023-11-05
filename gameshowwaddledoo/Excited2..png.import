@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwv1b1u5f3eww"
-path="res://.godot/imported/Excited2..png-2c0f5129226dcea53ee68be99a2c48cf.ctex"
+path="res://.godot/imported/Excited2..png-b6ce23eec43caf5f689339e2208c3279.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game show waddle doo/Excited2..png"
-dest_files=["res://.godot/imported/Excited2..png-2c0f5129226dcea53ee68be99a2c48cf.ctex"]
+source_file="res://gameshowwaddledoo/Excited2..png"
+dest_files=["res://.godot/imported/Excited2..png-b6ce23eec43caf5f689339e2208c3279.ctex"]
 
 [params]
 

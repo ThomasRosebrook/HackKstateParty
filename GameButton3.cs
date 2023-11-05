@@ -1,12 +1,11 @@
 using Godot;
 using System;
 
-public partial class GameShowButton1 : Button
+public partial class GameButton3 : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,8 +13,9 @@ public partial class GameShowButton1 : Button
 	{
 	}
 
-	public void button_idk()
-	{
-        GetTree().ChangeSceneToFile("res://gameshowwaddledoo/CorrectAnswer.tscn");
-    }
+    public void button_press3()
+    {
+    GetTree().ChangeSceneToFile("res://GameShow.tscn");
+	// Replace with function body.
+}
 }

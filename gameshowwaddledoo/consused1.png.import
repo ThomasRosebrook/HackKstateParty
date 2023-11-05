@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckcn28vphmxhv"
-path="res://.godot/imported/consused2.png-89f56cdc922aa229b151421511c84cac.ctex"
+uid="uid://cfeixmk887oe2"
+path="res://.godot/imported/consused1.png-4ee44431fe7c9d80f03a9300e0dc0597.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game show waddle doo/consused2.png"
-dest_files=["res://.godot/imported/consused2.png-89f56cdc922aa229b151421511c84cac.ctex"]
+source_file="res://gameshowwaddledoo/consused1.png"
+dest_files=["res://.godot/imported/consused1.png-4ee44431fe7c9d80f03a9300e0dc0597.ctex"]
 
 [params]
 

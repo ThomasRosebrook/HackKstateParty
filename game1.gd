@@ -12,10 +12,6 @@ func _process(delta):
 
 
 func game_over():
-	$GameOverTimer.start()
-	while true:
-		if $Timer.is_stopped():
-			break
 	$UI.show_game_over()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
