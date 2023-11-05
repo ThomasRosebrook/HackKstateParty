@@ -16,7 +16,7 @@ offset_left = 237.0
 offset_top = 329.0
 offset_right = 392.0
 offset_bottom = 398.0
-text = "Answer 1"
+text = "Strawberries"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
@@ -24,7 +24,7 @@ offset_left = 766.0
 offset_top = 329.0
 offset_right = 921.0
 offset_bottom = 398.0
-text = "Answer 2"
+text = "Cinnamon Rolls"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
@@ -32,7 +32,7 @@ offset_left = 237.0
 offset_top = 517.0
 offset_right = 392.0
 offset_bottom = 586.0
-text = "Answer 3"
+text = "Fried ice cream"
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0
@@ -40,7 +40,7 @@ offset_left = 766.0
 offset_top = 517.0
 offset_right = 921.0
 offset_bottom = 586.0
-text = "Answer 4"
+text = "Cheese Cake"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
