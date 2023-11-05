@@ -15,7 +15,7 @@ func _process(delta):
 	
 func game_over():
 	$UI.show_game_over()
-	$ScoreTimer.stop()
+	$UI/ScoreTimer.stop()
 	$MobTimer.stop()
 	pass # Replace with function body.
 func new_game():
@@ -67,15 +67,16 @@ func _on_start_timer_timeout():
 
 func _on_start_pressed():
 	$UI/Start.hide()
+	$UI/Menu5.hide()
 	start_game.emit()
 	pass # Replace with function body.
 
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn.tscn")
 	pass # Replace with function body.
 
 
 func _on_message_timer_timeout():
-	$Message.hide()
+	$UI/Message.hide()
 	pass # Replace with function body.
