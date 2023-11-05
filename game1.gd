@@ -15,7 +15,7 @@ func _process(delta):
 	
 func game_over():
 	$UI.show_game_over()
-	$UI/ScoreTimer.stop()
+	$UI/MessageTimer.stop()
 	$MobTimer.stop()
 	pass # Replace with function body.
 func new_game():
