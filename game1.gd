@@ -23,7 +23,6 @@ func new_game():
 	get_tree().call_group("mobs", "queue_free")
 	$UI.update_score(score)
 	$UI.show_message("Get Ready")
-
 	score = 0
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
@@ -70,6 +69,8 @@ func _on_start_timer_timeout():
 func _on_start_pressed():
 	$UI/Start.hide()
 	$UI/Menu5.hide()
+	$UI/JoeBiden.play()
+	$UI/MenuForGame.stop()
 	start_game.emit()
 	pass # Replace with function body.
 
