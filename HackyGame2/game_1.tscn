@@ -117,6 +117,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_3d76k")
 
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="start_game" from="." to="." method="new_game"]
 [connection signal="hit" from="Player" to="." method="new_game"]
 [connection signal="hit" from="Player" to="." method="game_over"]
