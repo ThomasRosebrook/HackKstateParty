@@ -19,6 +19,7 @@ public partial class GameButton2 : Godot.Button
 
 	public void button_press2()
 	{
+		//Funny
         GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
 		GetTree().ChangeSceneToFile("res://HackyGame2/game_1.tscn");
 	}
