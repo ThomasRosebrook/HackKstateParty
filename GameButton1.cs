@@ -1,6 +1,6 @@
 using Godot;
 using System;
-public partial class Game2 : Button
+public partial class GameButton1 : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

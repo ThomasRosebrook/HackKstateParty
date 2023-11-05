@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Button : Godot.Button
+public partial class GameButton2 : Godot.Button
 {
 	// Called when the node enters the scene tree for the first time.
 
@@ -19,9 +19,7 @@ public partial class Button : Godot.Button
 
 	public void button_press2()
 	{
-		//Text = "YOu pressed it";
         GD.Print("Game is starting!!!!!!!!!!!!!!!!!!!!!!!");
-		//GD.Print("Why it not work");
 		GetTree().ChangeSceneToFile("res://HackyGame2/game_1.tscn");
 	}
 }
