@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5p8tgs63ygqf"]
+[gd_scene load_steps=9 format=3 uid="uid://bqfthxx07gr37"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Menu.cs" id="1_llw0l"]
@@ -32,10 +32,10 @@ script = ExtResource("1_2ydrn")
 
 [node name="Game 1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 326.0
-offset_right = 647.0
-offset_bottom = 396.0
+offset_left = 489.0
+offset_top = 138.0
+offset_right = 644.0
+offset_bottom = 208.0
 text = "Game 1
 "
 icon_alignment = 1
@@ -43,10 +43,10 @@ script = ExtResource("3_borgb")
 
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 500.0
-offset_right = 644.0
-offset_bottom = 570.0
+offset_left = 486.0
+offset_top = 312.0
+offset_right = 641.0
+offset_bottom = 382.0
 text = "Game 2
 "
 script = ExtResource("4_0dpbu")
@@ -58,10 +58,10 @@ layer = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 493.0
-offset_top = 327.0
-offset_right = -504.0
-offset_bottom = -251.0
+offset_left = 490.0
+offset_top = 139.0
+offset_right = -507.0
+offset_bottom = -439.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
@@ -70,10 +70,21 @@ texture_normal = ExtResource("3_rqnxh")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 491.0
-offset_top = 499.0
-offset_right = -506.0
-offset_bottom = -79.0
+offset_left = 488.0
+offset_top = 311.0
+offset_right = -509.0
+offset_bottom = -267.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_rqnxh")
+
+[node name="TextureButton2" type="TextureButton" parent="Background/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 160.0
+offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
@@ -106,5 +117,15 @@ text = "Main Menu"
 fit_content = true
 script = ExtResource("7_kah8l")
 
+[node name="Game 3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 471.0
+offset_right = 643.0
+offset_bottom = 541.0
+text = "Game 3
+"
+
 [connection signal="pressed" from="Game 1" to="Game 1" method="button_press"]
 [connection signal="pressed" from="Game 2" to="Game 2" method="button_press2"]
+[connection signal="pressed" from="Game 3" to="." method="_on_button_pressed"]
