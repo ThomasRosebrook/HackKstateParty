@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://8s723r1blid4"]
+[gd_scene load_steps=9 format=3 uid="uid://8s723r1blid4"]
 
 [ext_resource type="Script" path="res://game1.gd" id="1_milnu"]
 [ext_resource type="PackedScene" uid="uid://dotkhcwddn7jj" path="res://HackyGame2/mob.tscn" id="2_okqdh"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://ba1a4gmr3rl8b" path="res://HackyGame2/moosic/more intense.mp3" id="4_12ab6"]
 [ext_resource type="Script" path="res://HackyGame2/UI.gd" id="5_2sc0p"]
 [ext_resource type="AudioStream" uid="uid://cruu8o1o8hjey" path="res://HackyGame2/moosic/keenan.mp3" id="6_omblb"]
+[ext_resource type="Texture2D" uid="uid://ctexhmk1n5bky" path="res://HackyGame2/background.png" id="7_3d76k"]
 
 [sub_resource type="Curve2D" id="Curve2D_20n5b"]
 _data = {
@@ -107,6 +108,18 @@ stream = ExtResource("4_12ab6")
 [node name="MenuForGame" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("6_omblb")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_3d76k")
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
 
 [connection signal="start_game" from="." to="." method="new_game"]
 [connection signal="hit" from="Player" to="." method="new_game"]

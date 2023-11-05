@@ -1,6 +1,6 @@
 extends Node
 @export var mob_scene: PackedScene
-var score
+var score = 0
 signal start_game
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +12,10 @@ func _process(delta):
 
 
 func game_over():
+	$GameOverTimer.start()
+	while true:
+		if $Timer.is_stopped():
+			break
 	$UI.show_game_over()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
