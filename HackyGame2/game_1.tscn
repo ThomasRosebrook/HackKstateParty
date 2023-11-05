@@ -40,7 +40,6 @@ rotation = 0.00344826
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_12ab6")
-autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("5_2sc0p")
