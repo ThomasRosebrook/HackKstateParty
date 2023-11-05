@@ -17,8 +17,8 @@ public partial class Menu : Control
 
 	public void Start()
 	{
-        AudioStreamPlayer menuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
-        menuMusic.Play();
-    }
+		AudioStreamPlayer menuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
+		menuMusic.Play();
+	}
 }
 
