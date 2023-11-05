@@ -1,15 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=9 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Menu.cs" id="1_llw0l"]
 [ext_resource type="Script" path="res://GameButton1.cs" id="3_borgb"]
 [ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
 [ext_resource type="Script" path="res://GameButton2.cs" id="4_0dpbu"]
+[ext_resource type="Texture2D" uid="uid://bjsgx1q7pu5ij" path="res://Assets/Art/Robot.png" id="6_5qflj"]
 [ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://HackyGame2/moosic/menu theme.mp3" id="6_7gr47"]
 [ext_resource type="Script" path="res://RichTextLabelStyle.cs" id="7_kah8l"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_san3t"]
-load_path = "res://.godot/imported/Background_1.jpg-8e0be714e0bc30b264657895785dd7ed.ctex"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -81,7 +79,6 @@ grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
-visible = false
 show_behind_parent = true
 visibility_layer = 512
 z_index = -1
@@ -89,7 +86,7 @@ offset_left = -5.0
 offset_top = -1.0
 offset_right = 1155.0
 offset_bottom = 718.0
-texture = SubResource("CompressedTexture2D_san3t")
+texture = ExtResource("6_5qflj")
 expand_mode = 2
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
@@ -102,6 +99,7 @@ offset_left = 479.0
 offset_top = 36.0
 offset_right = 648.0
 offset_bottom = 76.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 29
 bbcode_enabled = true
 text = "Main Menu"

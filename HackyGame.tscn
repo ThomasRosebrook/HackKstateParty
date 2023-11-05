@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://daux3d2nbyj4d"]
+[gd_scene load_steps=14 format=3 uid="uid://c3dws387rwh2q"]
 
 [ext_resource type="Texture2D" uid="uid://b0ey4gi5wshlu" path="res://Assets/Art/HackyDown.png" id="1_ebmia"]
 [ext_resource type="Script" path="res://Player.cs" id="1_gepeq"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://y44hdpctbx0r" path="res://Assets/Art/HackyUp.png" id="5_2emdj"]
 [ext_resource type="Texture2D" uid="uid://b26ic2duc2ibq" path="res://Assets/Art/Backgrounds/Back.png" id="7_1i0dt"]
 [ext_resource type="Script" path="res://TheFloor.cs" id="8_j51sk"]
-[ext_resource type="Texture2D" uid="uid://cusmgnuimnv2y" path="res://Assets/Art/PlaceholderLava.png" id="9_y0ll8"]
+[ext_resource type="Texture2D" uid="uid://gteeo0h28kd2" path="res://Assets/Art/TheFloorRising1152648.png" id="10_hd6q7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uk53e"]
 animations = [{
@@ -58,7 +58,7 @@ animations = [{
 size = Vector2(58, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i1201"]
-size = Vector2(1152, 31)
+size = Vector2(1152, 647)
 
 [node name="HackyGame" type="Node2D"]
 script = ExtResource("1_kc8b2")
@@ -90,13 +90,11 @@ gravity_scale = 0.0
 script = ExtResource("8_j51sk")
 
 [node name="Sprite2D" type="Sprite2D" parent="TheFloor"]
-position = Vector2(576, 950)
-texture = ExtResource("9_y0ll8")
+texture = ExtResource("10_hd6q7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheFloor"]
-position = Vector2(576, 641.5)
 shape = SubResource("RectangleShape2D_i1201")
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
-[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
+[connection signal="body_entered" from="Player" to="Player" method="OnBodyEntered"]
