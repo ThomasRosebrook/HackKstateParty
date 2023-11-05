@@ -20,6 +20,12 @@ public partial class Menu : Control
 		AudioStreamPlayer menuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
 		menuMusic.Play();
 	}
+
+	public void OnSecretButtonPress()
+	{
+		GD.Print(";)");
+		GetTree().ChangeSceneToFile("res://gameshowwaddledoo/example_grovving_dood.tscn");
+    }
 }
 
 

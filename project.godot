@@ -13,7 +13,7 @@ config_version=5
 config/name="Hack Kstate Party"
 run/main_scene="res://Menu.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://gameshowwaddledoo/Excited1.png"
 
 [display]
 

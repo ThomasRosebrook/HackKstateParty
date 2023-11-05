@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://btlwekbdxe0an"]
+[gd_scene load_steps=9 format=3 uid="uid://btlwekbdxe0an"]
 
 [ext_resource type="Texture2D" uid="uid://cfeixmk887oe2" path="res://gameshowwaddledoo/consused1.png" id="1_k0awv"]
+[ext_resource type="Script" path="res://gameshowwaddledoo/example_grovving_dood.cs" id="1_s2ybk"]
 [ext_resource type="Texture2D" uid="uid://ckcn28vphmxhv" path="res://gameshowwaddledoo/consused2.png" id="2_k7a3d"]
 [ext_resource type="Texture2D" uid="uid://cyweksq8875yy" path="res://gameshowwaddledoo/Excited1.png" id="3_g3lb8"]
 [ext_resource type="Texture2D" uid="uid://bwv1b1u5f3eww" path="res://gameshowwaddledoo/Excited2..png" id="4_uagy2"]
@@ -44,24 +45,25 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_s2ybk")
 
 [node name="Happy" type="AnimatedSprite2D" parent="."]
-position = Vector2(214, 223)
-scale = Vector2(3.71875, 3.71875)
+position = Vector2(248, 225)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fr2ku")
 animation = &"Confused"
 frame_progress = 0.421232
 
 [node name="Happy2" type="AnimatedSprite2D" parent="."]
-position = Vector2(816, 219)
-scale = Vector2(3.71875, 3.71875)
+position = Vector2(904, 225)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fr2ku")
 animation = &"Happy"
 frame_progress = 0.283848
 
 [node name="Happy3" type="AnimatedSprite2D" parent="."]
-position = Vector2(481, 213)
-scale = Vector2(3.71875, 3.71875)
+position = Vector2(576, 225)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_fr2ku")
 animation = &"Sad"
 frame_progress = 0.221784

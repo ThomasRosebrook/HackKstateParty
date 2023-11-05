@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://GameButton1.cs" id="3_borgb"]
 [ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="3_rqnxh"]
 [ext_resource type="Script" path="res://GameButton2.cs" id="4_0dpbu"]
-[ext_resource type="Texture2D" uid="uid://bjsgx1q7pu5ij" path="res://Assets/Art/Robot.png" id="6_5qflj"]
 [ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://HackyGame2/moosic/menu theme.mp3" id="6_7gr47"]
+[ext_resource type="Texture2D" uid="uid://b158qothmgkd3" path="res://Assets/Art/RobotWithLogo.png" id="6_ay0np"]
 [ext_resource type="Script" path="res://RichTextLabelStyle.cs" id="7_kah8l"]
 [ext_resource type="Script" path="res://GameButton3.cs" id="9_saodd"]
 
@@ -25,7 +25,7 @@ offset_top = 117.0
 offset_right = 399.0
 offset_bottom = 143.0
 scale = Vector2(7, 7)
-text = "Main Menu"
+text = " "
 horizontal_alignment = 2
 vertical_alignment = 2
 justification_flags = 161
@@ -34,9 +34,9 @@ script = ExtResource("1_2ydrn")
 [node name="Game 1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 489.0
-offset_top = 138.0
+offset_top = 200.0
 offset_right = 644.0
-offset_bottom = 208.0
+offset_bottom = 270.0
 text = "Crunch Time
 "
 icon_alignment = 1
@@ -45,9 +45,9 @@ script = ExtResource("3_borgb")
 [node name="Game 2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 486.0
-offset_top = 312.0
+offset_top = 350.0
 offset_right = 641.0
-offset_bottom = 382.0
+offset_bottom = 420.0
 text = "Professor Xscape"
 script = ExtResource("4_0dpbu")
 
@@ -59,9 +59,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 490.0
-offset_top = 139.0
+offset_top = 200.0
 offset_right = -507.0
-offset_bottom = -439.0
+offset_bottom = -378.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
@@ -71,20 +71,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 488.0
-offset_top = 311.0
+offset_top = 350.0
 offset_right = -509.0
-offset_bottom = -267.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("3_rqnxh")
-
-[node name="TextureButton2" type="TextureButton" parent="Background/TextureButton2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 160.0
-offset_bottom = 160.0
+offset_bottom = -228.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_rqnxh")
@@ -97,8 +86,20 @@ offset_left = -5.0
 offset_top = -1.0
 offset_right = 1155.0
 offset_bottom = 718.0
-texture = ExtResource("6_5qflj")
+texture = ExtResource("6_ay0np")
 expand_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 488.0
+offset_top = 510.0
+offset_right = 488.0
+offset_bottom = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_rqnxh")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7gr47")
@@ -113,20 +114,28 @@ offset_bottom = 76.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 29
 bbcode_enabled = true
-text = "Main Menu"
 fit_content = true
 script = ExtResource("7_kah8l")
 
 [node name="Game 3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 488.0
-offset_top = 471.0
+offset_top = 510.0
 offset_right = 643.0
-offset_bottom = 541.0
+offset_bottom = 580.0
 text = "A Midnight Bite 
 (Demo)"
 script = ExtResource("9_saodd")
 
+[node name="SecretButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 29.0
+offset_right = 615.0
+offset_bottom = 167.0
+flat = true
+
 [connection signal="pressed" from="Game 1" to="Game 1" method="button_press"]
 [connection signal="pressed" from="Game 2" to="Game 2" method="button_press2"]
 [connection signal="pressed" from="Game 3" to="Game 3" method="button_press3"]
+[connection signal="pressed" from="SecretButton" to="." method="OnSecretButtonPress"]
