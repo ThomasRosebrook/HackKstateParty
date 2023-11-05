@@ -20,7 +20,6 @@ func game_over():
 	get_tree().change_scene_to_file("res://HackyGame2/game_1.tscn")
 	pass # Replace with function body.
 func new_game():
-	$UI/MenuForGame.play()
 	get_tree().call_group("mobs", "queue_free")
 	$UI.update_score(score)
 	$UI.show_message("Get Ready")

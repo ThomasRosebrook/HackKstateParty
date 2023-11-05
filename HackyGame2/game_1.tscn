@@ -106,6 +106,7 @@ stream = ExtResource("4_12ab6")
 
 [node name="MenuForGame" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("6_omblb")
+autoplay = true
 
 [connection signal="start_game" from="." to="." method="new_game"]
 [connection signal="hit" from="Player" to="." method="new_game"]
