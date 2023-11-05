@@ -8,7 +8,8 @@ public partial class HackyGame : Node2D
 	public override void _Ready()
 	{
 		NewGame();
-	}
+        
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -31,5 +32,7 @@ public partial class HackyGame : Node2D
 		_score = 0;
 		var player = GetNode<Player>("Player");
 		player.Start(new Vector2(576, 300));
-	}
+        AudioStreamPlayer bgMusic = GetNode<AudioStreamPlayer>("BGMusic");
+        bgMusic.Play();
+    }
 }
