@@ -51,7 +51,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rige"]
-size = Vector2(59.3484, 40.9837)
+size = Vector2(58.3251, 46.1067)
 
 [node name="Player" type="Area2D"]
 position = Vector2(4, -10)
@@ -60,11 +60,13 @@ script = ExtResource("1_004t8")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_cc8om")
 animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.8147e-06, 11.2705)
+position = Vector2(-1.02325, 16.3935)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_2rige")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
