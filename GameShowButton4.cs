@@ -1,13 +1,11 @@
 using Godot;
 using System;
 
-public partial class Menu : Control
+public partial class GameShowButton4 : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		//GD.Print("TEST");
-		//Start();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,13 +13,8 @@ public partial class Menu : Control
 	{
 	}
 
-	public void Start()
+	public void button_fourth()
 	{
-		AudioStreamPlayer menuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
-		menuMusic.Play();
-	}
+        GetTree().ChangeSceneToFile("res://gameshowwaddledoo/IncorrectAnswer.tscn");
+    }
 }
-
-
-
-

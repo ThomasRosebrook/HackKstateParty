@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqfthxx07gr37"]
+[gd_scene load_steps=10 format=3 uid="uid://c5p8tgs63ygqf"]
 
 [ext_resource type="Script" path="res://Label.cs" id="1_2ydrn"]
 [ext_resource type="Script" path="res://Menu.cs" id="1_llw0l"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bjsgx1q7pu5ij" path="res://Assets/Art/Robot.png" id="6_5qflj"]
 [ext_resource type="AudioStream" uid="uid://w6qrg5kab4xl" path="res://HackyGame2/moosic/menu theme.mp3" id="6_7gr47"]
 [ext_resource type="Script" path="res://RichTextLabelStyle.cs" id="7_kah8l"]
+[ext_resource type="Script" path="res://GameButton3.cs" id="9_saodd"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -125,7 +126,8 @@ offset_right = 643.0
 offset_bottom = 541.0
 text = "Game 3
 "
+script = ExtResource("9_saodd")
 
 [connection signal="pressed" from="Game 1" to="Game 1" method="button_press"]
 [connection signal="pressed" from="Game 2" to="Game 2" method="button_press2"]
-[connection signal="pressed" from="Game 3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Game 3" to="Game 3" method="button_press3"]
