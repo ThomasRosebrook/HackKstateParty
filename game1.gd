@@ -66,13 +66,13 @@ func _on_start_timer_timeout():
 
 
 func _on_start_pressed():
-	$Start.hide()
+	$UI/Start.hide()
 	start_game.emit()
 	pass # Replace with function body.
 
 
 func _on_menu_pressed():
-	$menu.hide()
+	get_tree().change_scene_to_file("res://Menu.tscn")
 	pass # Replace with function body.
 
 
