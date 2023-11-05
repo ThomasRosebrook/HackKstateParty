@@ -22,9 +22,11 @@ func new_game():
 	get_tree().call_group("mobs", "queue_free")
 	$UI.update_score(score)
 	$UI.show_message("Get Ready")
+	$UI/Start.show()
+	$UI/Menu5.show()
 	score = 0
 	$Player.start($StartPosition.position)
-	$StartTimer.start()
+	$MessageTimer.start()
 
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
