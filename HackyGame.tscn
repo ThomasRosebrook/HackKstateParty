@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3dws387rwh2q"]
+[gd_scene load_steps=18 format=3 uid="uid://c3dws387rwh2q"]
 
 [ext_resource type="Texture2D" uid="uid://b0ey4gi5wshlu" path="res://Assets/Art/HackyDown.png" id="1_ebmia"]
 [ext_resource type="Script" path="res://Player.cs" id="1_gepeq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://TheFloor.cs" id="8_j51sk"]
 [ext_resource type="Texture2D" uid="uid://bntn2od3olo14" path="res://Assets/Art/TheFloorRisingLarge.png" id="10_0xb5n"]
 [ext_resource type="AudioStream" uid="uid://dmbrhnk26diih" path="res://HackyGame2/moosic/new.mp3" id="11_befix"]
+[ext_resource type="Script" path="res://HUD.cs" id="13_o53gm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uk53e"]
 animations = [{
@@ -102,8 +103,6 @@ texture = ExtResource("10_0xb5n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheFloor"]
 shape = SubResource("RectangleShape2D_i1201")
 
-[node name="ScoreTimer" type="Timer" parent="."]
-
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_befix")
 volume_db = -0.937
@@ -122,8 +121,75 @@ rotation = 1.5833
 wait_time = 2.0
 one_shot = true
 
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("13_o53gm")
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 580.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Watch out for the bad code"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Start" type="Button" parent="HUD"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 200.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[node name="MenuButton" type="Button" parent="HUD"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Menu"
+
+[connection signal="FloorRise" from="." to="TheFloor" method="OnFloorRise"]
+[connection signal="GameOvered" from="." to="HUD" method="ShowGameOver"]
 [connection signal="Hit" from="Player" to="." method="GameOver"]
 [connection signal="body_entered" from="Player" to="Player" method="OnBodyEntered"]
-[connection signal="timeout" from="ScoreTimer" to="." method="OnScoreTimerTimeout"]
 [connection signal="timeout" from="CodesteroidTimer" to="." method="OnCodesteroidTimerTimeout"]
 [connection signal="timeout" from="StartTimer" to="." method="OnStartTimerTimeout"]
+[connection signal="StartGame" from="HUD" to="." method="OnStartPressed"]
+[connection signal="pressed" from="HUD/Start" to="HUD" method="OnStartButtonPressed"]
+[connection signal="pressed" from="HUD/MenuButton" to="." method="OnMenuPressed"]

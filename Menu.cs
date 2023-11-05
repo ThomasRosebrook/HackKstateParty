@@ -23,9 +23,10 @@ public partial class Menu : Control
 }
 
 
-
+/*
 private void _on_button_pressed()
 {
 	get_tree().change_scene_to_file("res://GameShow.tscn")
 	// Replace with function body.
 }
+*/
