@@ -6,25 +6,18 @@ signal start_game
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 
-func waitForButtonPress():
-	while true:
-		if Input.is_action_pressed("UI/Start"):
-			break
-		elif Input.is_action_pressed("UI/Menu5"):
-			break
 func game_over():
 	$UI.show_game_over()
-	$UI/ScoreTimer.stop()
+	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$UI/Start.show()
 	$UI/Menu5.show()
-	waitForButtonPress()
+	get_tree().change_scene_to_file("res://HackyGame2/game_1.tscn")
 	pass # Replace with function body.
 func new_game():
 	get_tree().call_group("mobs", "queue_free")
@@ -82,7 +75,7 @@ func _on_start_pressed():
 
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://Menu.tscn.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")
 	pass # Replace with function body.
 
 
