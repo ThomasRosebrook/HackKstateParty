@@ -12,6 +12,11 @@ public partial class TheFloor : RigidBody2D
     CollisionShape2D collisionBox;
     Sprite2D sprite;
 
+    public void Reset()
+    {
+        _Ready();
+    }
+
 	public override void _Ready()
 	{
         Position = new Vector2(576, 948);

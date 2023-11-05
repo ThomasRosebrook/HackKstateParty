@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3dws387rwh2q"]
+[gd_scene load_steps=17 format=3 uid="uid://c3dws387rwh2q"]
 
 [ext_resource type="Texture2D" uid="uid://b0ey4gi5wshlu" path="res://Assets/Art/HackyDown.png" id="1_ebmia"]
 [ext_resource type="Script" path="res://Player.cs" id="1_gepeq"]
 [ext_resource type="Script" path="res://HackyGame.cs" id="1_kc8b2"]
+[ext_resource type="PackedScene" uid="uid://chnorqr2y6m81" path="res://codesteroid.tscn" id="2_3awxq"]
 [ext_resource type="Texture2D" uid="uid://4y0ywnygj7es" path="res://Assets/Art/HackyLeft.png" id="2_74wjr"]
 [ext_resource type="Texture2D" uid="uid://p2wlf472xj4k" path="res://Assets/Art/HackyRight.png" id="3_1s4tw"]
 [ext_resource type="Texture2D" uid="uid://7q3afg06qe5f" path="res://Assets/Art/Hacky.png" id="4_thegm"]
@@ -61,11 +62,16 @@ size = Vector2(58, 43)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i1201"]
 size = Vector2(1152, 647)
 
+[sub_resource type="Curve2D" id="Curve2D_i3gn2"]
+
 [node name="HackyGame" type="Node2D"]
 script = ExtResource("1_kc8b2")
+CodesteroidScene = ExtResource("2_3awxq")
 
 [node name="Player" type="Area2D" parent="."]
 position = Vector2(-4, -15)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_gepeq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -102,4 +108,22 @@ shape = SubResource("RectangleShape2D_i1201")
 stream = ExtResource("11_befix")
 volume_db = -0.937
 
+[node name="CodesteroidTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="CodesteroidPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_i3gn2")
+
+[node name="CodesteroidSpawnLocation" type="PathFollow2D" parent="CodesteroidPath"]
+position = Vector2(0, 8)
+rotation = 1.5833
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="Hit" from="Player" to="." method="GameOver"]
 [connection signal="body_entered" from="Player" to="Player" method="OnBodyEntered"]
+[connection signal="timeout" from="ScoreTimer" to="." method="OnScoreTimerTimeout"]
+[connection signal="timeout" from="CodesteroidTimer" to="." method="OnCodesteroidTimerTimeout"]
+[connection signal="timeout" from="StartTimer" to="." method="OnStartTimerTimeout"]
