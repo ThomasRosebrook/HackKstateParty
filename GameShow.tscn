@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://vucoxyjtwost"]
+[gd_scene load_steps=7 format=3 uid="uid://vucoxyjtwost"]
 
+[ext_resource type="Script" path="res://GameShow.cs" id="1_2m67d"]
 [ext_resource type="Texture2D" uid="uid://cuawwtcorbh36" path="res://Assets/Art/buttonDesign.png" id="1_gf1ad"]
+[ext_resource type="Script" path="res://GameShowButton1.cs" id="2_wrtad"]
+[ext_resource type="Script" path="res://GameShowButton2.cs" id="3_uxvtk"]
+[ext_resource type="Script" path="res://GameShowButton3.cs" id="4_ow7gw"]
+[ext_resource type="Script" path="res://GameShowButton4.cs" id="5_a7a0i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2m67d")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -17,6 +23,7 @@ offset_top = 329.0
 offset_right = 392.0
 offset_bottom = 398.0
 text = "Strawberries"
+script = ExtResource("2_wrtad")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
@@ -25,6 +32,7 @@ offset_top = 329.0
 offset_right = 921.0
 offset_bottom = 398.0
 text = "Cinnamon Rolls"
+script = ExtResource("3_uxvtk")
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
@@ -33,6 +41,7 @@ offset_top = 517.0
 offset_right = 392.0
 offset_bottom = 586.0
 text = "Fried ice cream"
+script = ExtResource("4_ow7gw")
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0
@@ -41,6 +50,7 @@ offset_top = 517.0
 offset_right = 921.0
 offset_bottom = 586.0
 text = "Cheese Cake"
+script = ExtResource("5_a7a0i")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -75,8 +85,14 @@ texture_normal = ExtResource("1_gf1ad")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 51.0
-offset_right = 792.0
-offset_bottom = 215.0
-text = "Question: What is professor Waddle Doo's favorite food?"
+offset_left = 260.0
+offset_top = 46.0
+offset_right = 917.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 24
+text = "Question: What is Professor Waddle Doo's favorite food?"
+
+[connection signal="pressed" from="Button" to="Button" method="button_idk"]
+[connection signal="pressed" from="Button2" to="Button2" method="button_joe"]
+[connection signal="pressed" from="Button3" to="Button3" method="button_third"]
+[connection signal="pressed" from="Button4" to="Button4" method="button_fourth"]
